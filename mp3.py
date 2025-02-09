@@ -296,6 +296,11 @@ if __name__ == "__main__":
 
     # Example configuration
     FEEDS_CONFIG = {
+        'cpr': {
+            'feed_url': 'https://pod.cpr.org/cm/',
+            'card_name': 'Colorado Matters',
+            'file_prefix': 'cpr'
+        },
         'npr': {
             'feed_url': 'https://feeds.npr.org/510019/podcast.xml',
             'card_name': 'NPR New Music Friday',
