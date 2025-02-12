@@ -5,7 +5,7 @@
 
 # Usage: ./run_jobs.sh <username>
 # Example: ./run_jobs.sh standard
-# cron: 0 4-17 * * * /home/standard/Projects/rss-personal-radio/run_jobs.sh standard >> /home/standard/Projects/rss-personal-radio/cron.log 2>&1
+# Once a day: 0 1 * * * /home/standard/Projects/rss-personal-radio/run_daily_jobs.sh standard >> /home/standard/Projects/rss-personal-radio/cron.log 2>&1
 
 # 1. Check if a username was provided as an argument.
 if [ $# -lt 1 ]; then
@@ -47,11 +47,11 @@ else
   exit 1
 fi
 
-# 8. Run mp3.py
-echo "Running mp3.py..."
-python mp3.py
+# 7. Run daily_intro.py
+echo "Running daily_intro.py..."
+python daily_intro.py
 if [ $? -ne 0 ]; then
-  echo "mp3.py encountered an error." >&2
+  echo "daily_intro.py encountered an error." >&2
 fi
 
 # 9. Deactivate the virtual environment if it was activated.
