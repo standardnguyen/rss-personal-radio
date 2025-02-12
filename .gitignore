@@ -2,6 +2,7 @@
 .env
 logs/
 temp/
+__pycache__/
 
 input.mp3
 corporate_voice.wav
